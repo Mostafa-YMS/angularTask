@@ -23,7 +23,10 @@ import {
   RempoveUser,
   UserRemoved,
 } from './remove-user/remove-user.component';
-import { UpdateUserComponent } from './update-user/update-user.component';
+import {
+  UpdateUserComponent,
+  UserUpdated,
+} from './update-user/update-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
@@ -34,6 +37,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     UsersComponent,
     RempoveUser,
     UserRemoved,
+    UserUpdated,
     SingleUserComponent,
     RemoveUserComponent,
     UpdateUserComponent,

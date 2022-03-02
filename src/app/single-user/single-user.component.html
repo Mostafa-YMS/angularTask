@@ -3,7 +3,14 @@
   <h2 class="username">{{ user?.first_name }} {{ user?.last_name }}</h2>
   <p>{{ user?.email }}</p>
   <div>
-    <button mat-raised-button color="primary" class="btn">Update</button>
+    <button
+      mat-raised-button
+      color="primary"
+      class="btn"
+      (click)="updateUser()"
+    >
+      Update
+    </button>
     <app-remove-user class="btn"></app-remove-user>
   </div>
 </mat-card>

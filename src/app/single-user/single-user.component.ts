@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -12,13 +12,16 @@ export class SingleUserComponent implements OnInit {
   user: any;
   constructor(
     private _ActivatedRoute: ActivatedRoute,
-    private _UsersService: UsersService
+    private _UsersService: UsersService,
+    private _Router: Router
   ) {
     this.id = _ActivatedRoute.snapshot.paramMap.get('id');
     _UsersService
       .getSingleUser(this.id)
       .subscribe((data) => (this.user = data.data));
   }
-
+  updateUser() {
+    this._Router.navigate([`/update/${this.id}`])
+  }
   ngOnInit(): void {}
 }

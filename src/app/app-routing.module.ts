@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'user/:id', component: SingleUserComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'update', component: UpdateUserComponent },
+  { path: 'update/:id', component: UpdateUserComponent },
 ];
 
 @NgModule({

@@ -22,4 +22,10 @@ export class UsersService {
       observe: 'response',
     });
   }
+
+  updateUser(id: String, data: Object): Observable<any> {
+    return this._HttpClient.patch(`${this.baseUrl}api/users/${id}`, data, {
+      observe: 'response',
+    });
+  }
 }
