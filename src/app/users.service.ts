@@ -16,4 +16,10 @@ export class UsersService {
   getSingleUser(id: String): Observable<any> {
     return this._HttpClient.get(`${this.baseUrl}api/users/${id}`);
   }
+
+  deleteUser(id: String): Observable<any> {
+    return this._HttpClient.delete(`${this.baseUrl}api/users/${id}`, {
+      observe: 'response',
+    });
+  }
 }

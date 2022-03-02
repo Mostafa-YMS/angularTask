@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'user/:id', component: SingleUserComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'remove', component: RemoveUserComponent },
   { path: 'update', component: UpdateUserComponent },
 ];
 

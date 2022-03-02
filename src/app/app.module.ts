@@ -6,6 +6,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +18,11 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
 import { SingleUserComponent } from './single-user/single-user.component';
-import { RemoveUserComponent } from './remove-user/remove-user.component';
+import {
+  RemoveUserComponent,
+  RempoveUser,
+  UserRemoved,
+} from './remove-user/remove-user.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -27,6 +32,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     UsersComponent,
+    RempoveUser,
+    UserRemoved,
     SingleUserComponent,
     RemoveUserComponent,
     UpdateUserComponent,
@@ -41,6 +48,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatDialogModule,
     FlexLayoutModule,
     MatButtonModule,
     ReactiveFormsModule,

@@ -1,5 +1,9 @@
 <mat-card fxLayoutAlign="center center" fxLayout="column" class="user-div">
-  <img [src]="user.avatar" alt="avatar" class="user-img"/>
-  <h2 class="username">{{ user.first_name }} {{ user.last_name }}</h2>
-  <p>{{ user.email }}</p>
+  <img [src]="user?.avatar" alt="avatar" class="user-img" />
+  <h2 class="username">{{ user?.first_name }} {{ user?.last_name }}</h2>
+  <p>{{ user?.email }}</p>
+  <div>
+    <button mat-raised-button color="primary" class="btn">Update</button>
+    <app-remove-user class="btn"></app-remove-user>
+  </div>
 </mat-card>
