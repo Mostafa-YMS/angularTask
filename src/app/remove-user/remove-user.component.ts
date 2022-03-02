@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UsersService } from '../users.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-remove-user',
@@ -13,13 +13,15 @@ export class RemoveUserComponent implements OnInit {
   constructor(
     private dialog: MatDialog,
     private _UsersService: UsersService,
-    private _ActivatedRoute: ActivatedRoute
+    private _ActivatedRoute: ActivatedRoute,
+    private _Router: Router
   ) {
     this.id = _ActivatedRoute.snapshot.paramMap.get('id');
   }
 
-  openRemovedDialog() {
+  userRemoved() {
     this.dialog.open(UserRemoved);
+    this._Router.navigate(['/users']);
   }
   openWantToRemoveDialog() {
     const dialogRef = this.dialog.open(RempoveUser);
@@ -28,7 +30,7 @@ export class RemoveUserComponent implements OnInit {
       if (result) {
         this._UsersService.deleteUser(this.id).subscribe((res) => {
           if (res?.status === 204) {
-            this.openRemovedDialog();
+            this.userRemoved();
           }
         });
       }
