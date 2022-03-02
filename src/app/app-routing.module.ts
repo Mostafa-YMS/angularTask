@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'user', component: SingleUserComponent },
+  { path: 'user/:id', component: SingleUserComponent },
   { path: 'users', component: UsersComponent },
   { path: 'remove', component: RemoveUserComponent },
   { path: 'update', component: UpdateUserComponent },

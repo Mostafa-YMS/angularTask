@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayout.sm="column">
+<div fxLayout="row wrap">
   <div
     *ngFor="let user of users"
     fxFlex.gt-md="25%"
@@ -6,7 +6,7 @@
     fxFlex.lt-md="100%"
     class="user-card-div"
   >
-    <mat-card fxLayoutAlign="center center" fxLayout="column" class="user-card">
+    <mat-card [routerLink]="['/user', user.id]" fxLayoutAlign="center center" fxLayout="column" class="user-card">
       <img [src]="user.avatar" alt="avatar" />
       <h3 class="username">{{ user.first_name }} {{ user.last_name }}</h3>
       <p>{{ user.email }}</p>

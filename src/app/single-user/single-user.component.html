@@ -1,1 +1,5 @@
-<p>single-user works!</p>
+<mat-card fxLayoutAlign="center center" fxLayout="column" class="user-div">
+  <img [src]="user.avatar" alt="avatar" class="user-img"/>
+  <h2 class="username">{{ user.first_name }} {{ user.last_name }}</h2>
+  <p>{{ user.email }}</p>
+</mat-card>

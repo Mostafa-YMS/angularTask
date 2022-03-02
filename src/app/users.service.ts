@@ -12,4 +12,8 @@ export class UsersService {
   getUsersList(): Observable<any> {
     return this._HttpClient.get(`${this.baseUrl}api/users?page=2`);
   }
+
+  getSingleUser(id: String): Observable<any> {
+    return this._HttpClient.get(`${this.baseUrl}api/users/${id}`);
+  }
 }
