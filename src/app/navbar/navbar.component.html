@@ -2,9 +2,10 @@
   <mat-toolbar color="primary">
     <span>User Admin</span>
     <div class="nav-btns">
-        <a mat-button routerLink="login">Login</a>
-        <a mat-button routerLink="register">Register</a>
-        <a mat-button routerLink="users">Users</a>
+      <a *ngIf="!isLoggedIn" mat-button routerLink="login">Login</a>
+      <a *ngIf="!isLoggedIn" mat-button routerLink="register">Register</a>
+      <a *ngIf="isLoggedIn" mat-button routerLink="users">Users</a>
     </div>
+    <button *ngIf="isLoggedIn" mat-button >Logout</button>
   </mat-toolbar>
 </nav>

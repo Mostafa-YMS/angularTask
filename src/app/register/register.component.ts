@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
 
   userRegistered() {
     this.dialog.open(UserCreated);
-    this._Router.navigate(['/users']);
+    this._Router.navigate(['/login']);
   }
 
   getRegisterInfo(createForm: any) {
