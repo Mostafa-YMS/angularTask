@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { RegisterComponent, UserCreated } from './register/register.component';
 import { UsersComponent } from './users/users.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import {
@@ -38,6 +38,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RempoveUser,
     UserRemoved,
     UserUpdated,
+    UserCreated,
     SingleUserComponent,
     RemoveUserComponent,
     UpdateUserComponent,
