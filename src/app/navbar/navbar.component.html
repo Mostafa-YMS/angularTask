@@ -6,6 +6,6 @@
       <a *ngIf="!isLoggedIn" mat-button routerLink="register">Register</a>
       <a *ngIf="isLoggedIn" mat-button routerLink="users">Users</a>
     </div>
-    <button *ngIf="isLoggedIn" mat-button >Logout</button>
+    <button *ngIf="isLoggedIn" mat-button (click)="logout()" class="logout-btn">Logout</button>
   </mat-toolbar>
 </nav>

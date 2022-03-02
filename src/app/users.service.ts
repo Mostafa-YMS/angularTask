@@ -56,5 +56,9 @@ export class UsersService {
     this.currentToken.next(token);
   }
 
-  
+  logout() {
+    this.currentToken.next(null);
+    localStorage.removeItem('token');
+    this._Router.navigate(['/login']);
+  }
 }
