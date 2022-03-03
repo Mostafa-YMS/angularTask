@@ -1,27 +1,74 @@
 # AngularTask
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.1.
+## Description:
 
-## Development server
+Users admin dashboard.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Function:
 
-## Code scaffolding
+- Login
+- Register
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The authenticated site admin can:
 
-## Build
+1. List users
+2. Delete user
+3. Update user
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Components:
 
-## Running unit tests
+### 1. Navbar:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Navbar contains register, log in for the unauthenticated user, log out, and users for the authenticated user.
 
-## Running end-to-end tests
+### 2. Login:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Login with email and password, after successful login, redirect to the users' page.
 
-## Further help
+### 3. Register:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Register with email and password, after successful login redirects to the login page.
+
+### 4. users:
+
+contain all users' cards, redirect to a single user on clicking the user's card.
+
+### 5. Single user:
+
+contain single user card.
+
+### 6. Remove user:
+
+Return delete button that removes the currently viewed user, after prompting the user for confirmation.
+
+### 7. Update user:
+
+Contain a form for updating the user name and job.
+
+## Guards:
+
+### 1. auth:
+
+Prevent unauthorized users from viewing or editing users.
+
+### 2. login:
+
+Prevent already authorized users from visiting login or register pages.
+
+## Users service:
+
+Provide the components with the needed APIs for the various functions.
+
+## Installation and running:
+
+After cloning run:
+
+`npm install`
+
+then
+
+`ng serve`
+
+And `ng test` for testing.
+
+`NOTE`: open in disabled security browser
