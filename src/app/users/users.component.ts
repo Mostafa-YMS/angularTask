@@ -9,9 +9,10 @@ import { UsersService } from '../users.service';
 export class UsersComponent implements OnInit {
   users: Object;
   constructor(private _UsersService: UsersService) {
-    this._UsersService
-      .getUsersList()
-      .subscribe((data) => (this.users = data.data));
+    this._UsersService.getUsersList().subscribe(
+      (data) => (this.users = data.data),
+      (err) => console.log(err)
+    );
   }
 
   ngOnInit(): void {}
